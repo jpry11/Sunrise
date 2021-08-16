@@ -27,7 +27,9 @@ const findDayLengthOfEarliestSunrise = async (
     const dayLength = new Date(filteredSolarData.shift().day_length * 1000)
       .toISOString()
       .substr(11, 8);
-    console.log(dayLength);
+    console.log(
+      `The length of the day with the earliest sunrise out of the given co-ordinates is: ${dayLength}`
+    );
   } catch (err) {
     throw err;
   }
